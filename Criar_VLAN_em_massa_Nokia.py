@@ -1,3 +1,7 @@
+
+#Author: Felipe Lira
+#Date: 26/02/2022
+
 print("Criar VLAN em massa - Nokia")
 vlan_inicio = int(input("Informe a primeira VLAN do Range: "))
 vlan_final = int (input("Informe a última VLAN do Range: "))
@@ -20,7 +24,3 @@ while vlan <= vlan_final:
         arquivo.write(f'configure vlan id {vlan} mode residential-bridge name SLOT{card}-PON{pon} in-qos-prof-name name:HSI ipv6-mcast-ctrl')
     vlan = vlan + 1
     pon = pon + 1
-    
-    
-
-
